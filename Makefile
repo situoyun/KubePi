@@ -30,5 +30,8 @@ build_gotty:
 
 build_all: build_web build_gotty build_bin
 
-build_docker:
-	docker build -t kubeoperator/kubepi-server:master .
+build_docker: build_web_kubepi
+	docker build -t d.autops.xyz/kubepi-server:master .
+
+build_base:
+	docker build -f Dockerfile.base -t d.autops.xyz/kubepi-base:master .
