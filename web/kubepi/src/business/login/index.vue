@@ -144,9 +144,10 @@ export default {
   },
   created: function () {
     document.addEventListener("keydown", this.watchEnter)
+  },
+  mounted: function(){
     this.submit("form")
   },
-
   destroyed () {
     document.removeEventListener("keydown", this.watchEnter)
   },
@@ -230,6 +231,7 @@ export default {
     background-color: #FFFFFF;
     height: 100%;
     @include login-center;
+    display: none;
   }
 
   .login-container {
