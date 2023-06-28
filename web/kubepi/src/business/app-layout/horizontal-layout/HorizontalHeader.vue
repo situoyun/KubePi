@@ -41,6 +41,7 @@ export default {
     @include flex-row(flex-end, center);
     flex: auto;
     height: 100%;
+    display: none;
 
     .navbar-item {
       color: #2E2E2E;

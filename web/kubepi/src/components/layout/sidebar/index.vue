@@ -16,7 +16,7 @@
                       :base-path="route.path"/>
       </el-menu>
     </el-scrollbar>
-    <div style="float:left;margin-left: 50px">
+    <div style="float:left;margin-left: 50px;display:none">
       <el-link type="info" @click="openApi"> <span style="font-size: 16px"> KubePi API V1.0</span></el-link>
     </div>
   </div>

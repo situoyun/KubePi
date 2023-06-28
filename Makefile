@@ -30,7 +30,7 @@ build_gotty:
 
 build_all: build_web build_gotty build_bin
 
-build_docker: build_web_kubepi
+build_docker: build_web_dashboard
 	docker build -t d.autops.xyz/kubepi-server:master .
 
 build_base:

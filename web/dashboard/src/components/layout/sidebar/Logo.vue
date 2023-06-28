@@ -35,6 +35,7 @@ export default {
 @import "~@/styles/common/variables";
 
 .sidebar-logo-container {
+  display: none;
   position: relative;
   height: $header-height;
   line-height: $header-height;
