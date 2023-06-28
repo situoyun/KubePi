@@ -2,6 +2,7 @@ import Layout from "@/business/app-layout/horizontal-layout"
 
 const Charts = {
   path: "/charts",
+  hidden: true,
   sort: 7,
   component: Layout,
   name: "ChartManagement",

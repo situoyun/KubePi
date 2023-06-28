@@ -2,6 +2,7 @@ import Layout from "@/business/app-layout/horizontal-layout"
 
 const AccessControl = {
   path: "/accesscontrol",
+  hidden: true,
   parent: true,
   sort: 6,
   component: Layout,

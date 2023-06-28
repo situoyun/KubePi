@@ -6,7 +6,7 @@
       <i class="el-icon-arrow-down el-icon--right"></i>
     </span>
     <el-dropdown-menu slot="dropdown" style="max-height: 300px;overflow:auto">
-      <el-dropdown-item command="">All Namespaces</el-dropdown-item>
+      <el-dropdown-item command="">app-store</el-dropdown-item>
       <el-dropdown-item disabled divided></el-dropdown-item>
       <el-dropdown-item v-for="(value,key) in namespaceOptions" :key="key" :command="value">{{ value }}
       </el-dropdown-item>
@@ -55,6 +55,7 @@ export default {
     Bus.$on('refresh',() => {
       this.getNamespaceList()
     })
+    sessionStorage.setItem("namespace", 'app-store')
   }
 }
 

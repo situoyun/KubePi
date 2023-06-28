@@ -2,6 +2,7 @@ import Layout from "@/business/app-layout/horizontal-layout"
 
 const Clusters = {
     path: "/cluster",
+    hidden: true,
     parent: true,
     global: true,
     sort: 1,

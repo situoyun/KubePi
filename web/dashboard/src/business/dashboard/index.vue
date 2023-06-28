@@ -59,7 +59,7 @@
 
     <el-row :gutter="20" class="resources row-box">
       <el-col v-for="(resource,index) in resources" v-bind:key="resource.name" :xs="8" :sm="8" :lg="6">
-        <el-card :body-style="{padding: '0px'}" @click.native="jumpTo(resource.name)" class="d-card el-card">
+        <el-card :body-style="{padding: '0px'}" class="d-card el-card">
           <el-row :gutter="24">
             <el-col :span="10">
               <div>
@@ -76,7 +76,7 @@
         </el-card>
       </el-col>
     </el-row>
-    <el-row :gutter="24" v-has-permissions="{apiGroup:'',resource:'events',verb:'list'}">
+    <el-row :gutter="24" v-has-permissions="{apiGroup:'',resource:'events',verb:'list'}" v-show="false">
       <h4 style="margin-left: 10px;float: left">{{$t('business.event.event')}}</h4>
       <complex-table style="margin-top:20px" :data="events" @search="search" v-loading="loading" :pagination-config="paginationConfig"
                      :search-config="searchConfig">
@@ -180,7 +180,8 @@ export default {
       this.dialogMetricVisible = val
     },
     jumpTo(val) {
-      this.$router.push({name: val})
+      console.log(val)
+      // this.$router.push({name: val})
     },
     listResources() {
       getCluster(this.clusterName).then(res => {
@@ -313,7 +314,7 @@ export default {
           this.resources.push(services)
         })
       }
-      this.search()
+      // this.search()
     },
     search(resetPage) {
       this.loading = true

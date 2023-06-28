@@ -52,6 +52,7 @@ export default {
 }
 
 .header-container {
+  display: none;
   height: $header-height;
   padding: 0 $header-padding;
 }
